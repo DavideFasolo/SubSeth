@@ -1,4 +1,5 @@
 #include "plugin.hpp"
+#include "shared/SubPorts.hpp"
 
 struct UPolM : Module {
 	enum ParamIds {
@@ -86,24 +87,24 @@ struct UPolMWidget : ModuleWidget {
 		setModule(module);
 		setPanel(createPanel(asset::plugin(pluginInstance, "res/U-Pol-M.svg")));
 
-		addOutput(createOutputCentered<PJ301MPort>(Vec(30.f, 54.f), module, UPolM::POLY_OUTPUT));
+		addOutput(createOutputCentered<BluePort>(Vec(30.f, 54.f), module, UPolM::POLY_OUTPUT));
 
-		addInput(createInputCentered<PJ301MPort>(Vec(17.f, 92.f), module, UPolM::IN_1_INPUT));
-		addInput(createInputCentered<PJ301MPort>(Vec(43.f, 108.f), module, UPolM::IN_2_INPUT));
-		addInput(createInputCentered<PJ301MPort>(Vec(17.f, 124.f), module, UPolM::IN_3_INPUT));
-		addInput(createInputCentered<PJ301MPort>(Vec(43.f, 140.f), module, UPolM::IN_4_INPUT));
-		addInput(createInputCentered<PJ301MPort>(Vec(17.f, 156.f), module, UPolM::IN_5_INPUT));
-		addInput(createInputCentered<PJ301MPort>(Vec(43.f, 172.f), module, UPolM::IN_6_INPUT));
-		addInput(createInputCentered<PJ301MPort>(Vec(17.f, 188.f), module, UPolM::IN_7_INPUT));
-		addInput(createInputCentered<PJ301MPort>(Vec(43.f, 204.f), module, UPolM::IN_8_INPUT));
-		addInput(createInputCentered<PJ301MPort>(Vec(17.f, 220.f), module, UPolM::IN_9_INPUT));
-		addInput(createInputCentered<PJ301MPort>(Vec(43.f, 236.f), module, UPolM::IN_10_INPUT));
-		addInput(createInputCentered<PJ301MPort>(Vec(17.f, 252.f), module, UPolM::IN_11_INPUT));
-		addInput(createInputCentered<PJ301MPort>(Vec(43.f, 268.f), module, UPolM::IN_12_INPUT));
-		addInput(createInputCentered<PJ301MPort>(Vec(17.f, 284.f), module, UPolM::IN_13_INPUT));
-		addInput(createInputCentered<PJ301MPort>(Vec(43.f, 300.f), module, UPolM::IN_14_INPUT));
-		addInput(createInputCentered<PJ301MPort>(Vec(17.f, 316.f), module, UPolM::IN_15_INPUT));
-		addInput(createInputCentered<PJ301MPort>(Vec(43.f, 332.f), module, UPolM::IN_16_INPUT));
+		addInput(createInputCentered<SilverPort>(Vec(17.f, 92.f), module, UPolM::IN_1_INPUT));
+		addInput(createInputCentered<SilverPort>(Vec(43.f, 108.f), module, UPolM::IN_2_INPUT));
+		addInput(createInputCentered<SilverPort>(Vec(17.f, 124.f), module, UPolM::IN_3_INPUT));
+		addInput(createInputCentered<SilverPort>(Vec(43.f, 140.f), module, UPolM::IN_4_INPUT));
+		addInput(createInputCentered<SilverPort>(Vec(17.f, 156.f), module, UPolM::IN_5_INPUT));
+		addInput(createInputCentered<SilverPort>(Vec(43.f, 172.f), module, UPolM::IN_6_INPUT));
+		addInput(createInputCentered<SilverPort>(Vec(17.f, 188.f), module, UPolM::IN_7_INPUT));
+		addInput(createInputCentered<SilverPort>(Vec(43.f, 204.f), module, UPolM::IN_8_INPUT));
+		addInput(createInputCentered<SilverPort>(Vec(17.f, 220.f), module, UPolM::IN_9_INPUT));
+		addInput(createInputCentered<SilverPort>(Vec(43.f, 236.f), module, UPolM::IN_10_INPUT));
+		addInput(createInputCentered<SilverPort>(Vec(17.f, 252.f), module, UPolM::IN_11_INPUT));
+		addInput(createInputCentered<SilverPort>(Vec(43.f, 268.f), module, UPolM::IN_12_INPUT));
+		addInput(createInputCentered<SilverPort>(Vec(17.f, 284.f), module, UPolM::IN_13_INPUT));
+		addInput(createInputCentered<SilverPort>(Vec(43.f, 300.f), module, UPolM::IN_14_INPUT));
+		addInput(createInputCentered<SilverPort>(Vec(17.f, 316.f), module, UPolM::IN_15_INPUT));
+		addInput(createInputCentered<SilverPort>(Vec(43.f, 332.f), module, UPolM::IN_16_INPUT));
 	}
 };
 
