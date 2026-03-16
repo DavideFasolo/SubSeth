@@ -1,15 +1,25 @@
 {
   "slug": "SubSeth",
   "name": "SubSeth",
-  "version": "0.1.0",
+  "version": "2.0.1",
   "license": "proprietary",
   "brand": "SubSeth",
-  "author": "Davide",
+  "author": "Seth",
   "authorEmail": "",
   "authorUrl": "",
   "pluginUrl": "",
   "manualUrl": "",
   "sourceUrl": "",
   "donateUrl": "",
-  "modules": []
+  "modules": [
+    {
+      "slug": "U-Pol-M",
+      "name": "U-Pol-M",
+      "description": "16-to-1 polyphonic channel merger",
+      "tags": [
+        "Polyphonic",
+        "Utility"
+      ]
+    }
+  ]
 }
