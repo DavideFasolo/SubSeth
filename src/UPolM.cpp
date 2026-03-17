@@ -1,5 +1,34 @@
 #include "plugin.hpp"
-#include "shared/SubPorts.hpp"
+#include "shared/PortLayout.hpp"
+#include "shared/SubPanel.hpp"
+#include "shared/SubControls.hpp"
+#include "shared/SubConnector.hpp"
+#include "shared/SubModuleWidget.hpp"
+#include <vector>
+
+static constexpr int U_POL_M_INPUT_COUNT = 16;
+
+static const ZigZagPortLayout U_POL_M_INPUT_LAYOUT = {
+	U_POL_M_INPUT_COUNT,
+	30.f, // centerX
+	95.f, // topY
+	26.f, // dx
+	16.f  // dy
+};
+
+static const Vec U_POL_M_OUTPUT_POS = Vec(30.f, 40.f);
+
+static inline ConnectorSpec makeUPolMPolyOutSpec(int id) {
+	return makePolyOutput(
+		id,
+		1,
+		U_POL_M_OUTPUT_POS,
+		"Poly out",
+		"Poly OUT"
+	);
+}
+
+static std::vector<ConnectorSpec> makeUPolMInputSpecs();
 
 struct UPolM : Module {
 	enum ParamIds {
@@ -34,30 +63,19 @@ struct UPolM : Module {
 
 	UPolM() {
 		config(NUM_PARAMS, NUM_INPUTS, NUM_OUTPUTS, NUM_LIGHTS);
-		configOutput(POLY_OUTPUT, "Poly out");
 
-		configInput(IN_1_INPUT, "Input 1");
-		configInput(IN_2_INPUT, "Input 2");
-		configInput(IN_3_INPUT, "Input 3");
-		configInput(IN_4_INPUT, "Input 4");
-		configInput(IN_5_INPUT, "Input 5");
-		configInput(IN_6_INPUT, "Input 6");
-		configInput(IN_7_INPUT, "Input 7");
-		configInput(IN_8_INPUT, "Input 8");
-		configInput(IN_9_INPUT, "Input 9");
-		configInput(IN_10_INPUT, "Input 10");
-		configInput(IN_11_INPUT, "Input 11");
-		configInput(IN_12_INPUT, "Input 12");
-		configInput(IN_13_INPUT, "Input 13");
-		configInput(IN_14_INPUT, "Input 14");
-		configInput(IN_15_INPUT, "Input 15");
-		configInput(IN_16_INPUT, "Input 16");
+		SubModule::configConnector(this, makeUPolMPolyOutSpec(POLY_OUTPUT));
+
+		auto inputSpecs = makeUPolMInputSpecs();
+		for (const auto& c : inputSpecs) {
+			SubModule::configConnector(this, c);
+		}
 	}
 
 	void process(const ProcessArgs& args) override {
 		int lastConnected = -1;
 
-		for (int i = 0; i < 16; ++i) {
+		for (int i = 0; i < U_POL_M_INPUT_COUNT; ++i) {
 			if (inputs[IN_1_INPUT + i].isConnected()) {
 				lastConnected = i;
 			}
@@ -82,29 +100,28 @@ struct UPolM : Module {
 	}
 };
 
-struct UPolMWidget : ModuleWidget {
-	UPolMWidget(UPolM* module) {
-		setModule(module);
-		setPanel(createPanel(asset::plugin(pluginInstance, "res/U-Pol-M.svg")));
+static std::vector<ConnectorSpec> makeUPolMInputSpecs() {
+	return makeMonoInputSpecsFromPoints(
+		makeZigZagPortCenters(U_POL_M_INPUT_LAYOUT),
+		UPolM::IN_1_INPUT
+	);
+}
 
-		addOutput(createOutputCentered<BluePort>(Vec(30.f, 54.f), module, UPolM::POLY_OUTPUT));
+struct UPolMPanel : SubPanel::LabeledPanel {
+	UPolMPanel() : SubPanel::LabeledPanel(4, "U·Pol·M") {}
+};
 
-		addInput(createInputCentered<SilverPort>(Vec(17.f, 92.f), module, UPolM::IN_1_INPUT));
-		addInput(createInputCentered<SilverPort>(Vec(43.f, 108.f), module, UPolM::IN_2_INPUT));
-		addInput(createInputCentered<SilverPort>(Vec(17.f, 124.f), module, UPolM::IN_3_INPUT));
-		addInput(createInputCentered<SilverPort>(Vec(43.f, 140.f), module, UPolM::IN_4_INPUT));
-		addInput(createInputCentered<SilverPort>(Vec(17.f, 156.f), module, UPolM::IN_5_INPUT));
-		addInput(createInputCentered<SilverPort>(Vec(43.f, 172.f), module, UPolM::IN_6_INPUT));
-		addInput(createInputCentered<SilverPort>(Vec(17.f, 188.f), module, UPolM::IN_7_INPUT));
-		addInput(createInputCentered<SilverPort>(Vec(43.f, 204.f), module, UPolM::IN_8_INPUT));
-		addInput(createInputCentered<SilverPort>(Vec(17.f, 220.f), module, UPolM::IN_9_INPUT));
-		addInput(createInputCentered<SilverPort>(Vec(43.f, 236.f), module, UPolM::IN_10_INPUT));
-		addInput(createInputCentered<SilverPort>(Vec(17.f, 252.f), module, UPolM::IN_11_INPUT));
-		addInput(createInputCentered<SilverPort>(Vec(43.f, 268.f), module, UPolM::IN_12_INPUT));
-		addInput(createInputCentered<SilverPort>(Vec(17.f, 284.f), module, UPolM::IN_13_INPUT));
-		addInput(createInputCentered<SilverPort>(Vec(43.f, 300.f), module, UPolM::IN_14_INPUT));
-		addInput(createInputCentered<SilverPort>(Vec(17.f, 316.f), module, UPolM::IN_15_INPUT));
-		addInput(createInputCentered<SilverPort>(Vec(43.f, 332.f), module, UPolM::IN_16_INPUT));
+struct UPolMWidget : SubModuleWidget<UPolM, UPolMPanel> {
+	UPolMWidget(UPolM* module) : SubModuleWidget(module) {
+
+		addConnector(
+			makeUPolMPolyOutSpec(UPolM::POLY_OUTPUT)
+		);
+
+		auto inputSpecs = makeUPolMInputSpecs();
+		for (const auto& c : inputSpecs) {
+			addConnector(c);
+		}
 	}
 };
 
