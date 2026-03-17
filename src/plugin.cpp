@@ -5,4 +5,5 @@ Plugin* pluginInstance = nullptr;
 void init(Plugin* p) {
 	pluginInstance = p;
 	p->addModel(modelUPolM);
+	p->addModel(modelUPolS);
 }

@@ -1,7 +1,7 @@
 {
   "slug": "SubSeth",
   "name": "SubSeth",
-  "version": "2.0.3",
+  "version": "2.1.0",
   "license": "GPL-3.0-only",
   "brand": "SubSeth",
   "author": "Seth",
@@ -16,6 +16,15 @@
       "slug": "U-Pol-M",
       "name": "U-Pol-M",
       "description": "16-to-1 polyphonic channel merger",
+      "tags": [
+        "Polyphonic",
+        "Utility"
+      ]
+    },
+    {
+      "slug": "U-Pol-S",
+      "name": "U-Pol-S",
+      "description": "1-to-16 polyphonic channel splitter",
       "tags": [
         "Polyphonic",
         "Utility"

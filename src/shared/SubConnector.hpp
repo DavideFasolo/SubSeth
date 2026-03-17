@@ -182,6 +182,17 @@ static inline std::vector<ConnectorSpec> makeMonoInputSpecsFromPoints(
 	});
 }
 
+
+static inline std::vector<ConnectorSpec> makeMonoOutputSpecsFromPoints(
+	const std::vector<Vec>& pts,
+	int firstId,
+	int firstNumber = 1
+) {
+	return makeConnectorSpecs((int) pts.size(), [&](int i) {
+		return makeMonoOutput(firstId + i, firstNumber + i, pts[i]);
+	});
+}
+
 namespace SubModule {
 
 static inline std::string defaultConnectorName(const ConnectorSpec& c) {
