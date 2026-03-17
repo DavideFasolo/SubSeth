@@ -74,6 +74,12 @@ static inline PortWidget* addConnector(
 			case ConnectorTheme::Black:
 				port = createInputCentered<BlackPort>(c.pos, module, c.id);
 				break;
+			case ConnectorTheme::Purple:
+				port = createInputCentered<PurplePort>(c.pos, module, c.id);
+				break;
+			case ConnectorTheme::Pink:
+				port = createInputCentered<PinkPort>(c.pos, module, c.id);
+				break;
 		}
 		if (port) {
 			moduleWidget->addInput(port);
@@ -92,6 +98,12 @@ static inline PortWidget* addConnector(
 				break;
 			case ConnectorTheme::Black:
 				port = createOutputCentered<BlackPort>(c.pos, module, c.id);
+				break;
+			case ConnectorTheme::Purple:
+				port = createOutputCentered<PurplePort>(c.pos, module, c.id);
+				break;
+			case ConnectorTheme::Pink:
+				port = createOutputCentered<PinkPort>(c.pos, module, c.id);
 				break;
 		}
 		if (port) {

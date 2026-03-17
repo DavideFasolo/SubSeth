@@ -36,3 +36,15 @@ struct BlackPort : SilverPort {
 		col = nvgRGB(0x40, 0x40, 0x40);
 	}
 };
+
+struct PurplePort : SilverPort {
+	PurplePort() {
+		col = nvgRGB(0xD0, 0x00, 0xF0);
+	}
+};
+
+struct PinkPort : SilverPort {
+	PinkPort() {
+		col = nvgRGB(0xe0, 0x80, 0xb0);
+	}
+};

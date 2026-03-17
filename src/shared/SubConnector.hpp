@@ -8,7 +8,9 @@ enum class ConnectorTheme {
 	Silver,
 	Red,
 	Blue,
-	Black
+	Black,
+	Purple,
+	Pink
 };
 
 enum class ConnectorSignal {
@@ -72,7 +74,7 @@ static inline ConnectorTheme resolveTheme(const ConnectorSpec& c) {
 		case ConnectorSignal::Mono:
 			return ConnectorTheme::Silver;
 		case ConnectorSignal::Poly:
-			return ConnectorTheme::Blue;
+			return ConnectorTheme::Purple;
 	}
 	return ConnectorTheme::Silver;
 }

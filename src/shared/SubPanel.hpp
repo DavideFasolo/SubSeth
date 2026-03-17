@@ -3,6 +3,7 @@
 #include "../plugin.hpp"
 #include "SubDraw.hpp"
 #include "SubTheme.hpp"
+#include "SubLogo.hpp"
 #include <cstdlib>
 #include <string>
 #include <vector>
@@ -21,6 +22,7 @@ struct BasePanel : Widget {
 		nvgRect(args.vg, 0.f, 0.f, box.size.x, box.size.y);
 		nvgFillColor(args.vg, SubTheme::panelBg());
 		nvgFill(args.vg);
+		SubLogo::drawLogo(args, box.size);
 	}
 };
 

@@ -8,7 +8,9 @@ enum class PortStyle {
 	Silver,
 	Blue,
 	Red,
-	Black
+	Black,
+	Purple,
+	Pink
 };
 
 struct InputPortSpec {
@@ -81,6 +83,12 @@ static inline void addInputByStyle(
 		case PortStyle::Black:
 			w->addInput(createInputCentered<BlackPort>(pos, module, inputId));
 			break;
+		case PortStyle::Purple:
+			w->addInput(createInputCentered<PurplePort>(pos, module, inputId));
+			break;
+		case PortStyle::Pink:
+			w->addInput(createInputCentered<PinkPort>(pos, module, inputId));
+			break;
 	}
 }
 
@@ -103,6 +111,12 @@ static inline void addOutputByStyle(
 			break;
 		case PortStyle::Black:
 			w->addOutput(createOutputCentered<BlackPort>(pos, module, outputId));
+			break;
+		case PortStyle::Purple:
+			w->addOutput(createOutputCentered<PurplePort>(pos, module, outputId));
+			break;
+		case PortStyle::Pink:
+			w->addOutput(createOutputCentered<PinkPort>(pos, module, outputId));
 			break;
 	}
 }
