@@ -53,7 +53,7 @@ static inline PortWidget* addConnector(
 	Module* module,
 	const ConnectorSpec& c
 ) {
-	if (!moduleWidget || !module || c.id < 0) {
+	if (!moduleWidget || c.id < 0) {
 		return nullptr;
 	}
 

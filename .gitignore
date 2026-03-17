@@ -1,9 +1,15 @@
-build/
-dist/
-*.o
-*.so
-*.a
-*.dylib
-*.dll
-*.vcvplugin
-.DS_Store
+# Build artifacts
+/build/
+/dist/
+/.cache/
+/dep/
+/plugin.so
+/compile_commands.json
+
+# Backups and editor junk
+*.bak
+*.orig
+*.rej
+*~
+*.swp
+*.swo
