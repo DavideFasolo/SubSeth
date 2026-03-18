@@ -6,4 +6,5 @@ void init(Plugin* p) {
 	pluginInstance = p;
 	p->addModel(modelUPolM);
 	p->addModel(modelUPolS);
+	p->addModel(modelUMult8);
 }

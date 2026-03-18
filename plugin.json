@@ -1,7 +1,7 @@
 {
   "slug": "SubSeth",
   "name": "SubSeth",
-  "version": "2.1.1",
+  "version": "2.2.0",
   "license": "GPL-3.0-only",
   "brand": "SubSeth",
   "author": "Seth",
@@ -25,6 +25,15 @@
       "slug": "U-Pol-S",
       "name": "U-Pol-S",
       "description": "1-to-16 polyphonic channel splitter",
+      "tags": [
+        "Polyphonic",
+        "Utility"
+      ]
+    },
+    {
+      "slug": "U-Mult8",
+      "name": "U-Mult8",
+      "description": "8-channel universal mult with editable labels",
       "tags": [
         "Polyphonic",
         "Utility"

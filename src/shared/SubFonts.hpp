@@ -16,4 +16,10 @@ static inline std::shared_ptr<Font> foPort() {
 	);
 }
 
+static inline std::shared_ptr<Font> foLabelMono() {
+	return APP->window->loadFont(
+		asset::plugin(pluginInstance, "res/fonts/IBMPlexMono/IBMPlexMono-Regular.ttf")
+	);
+}
+
 } // namespace SubFonts
