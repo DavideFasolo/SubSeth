@@ -3,6 +3,7 @@ RACK_DIR ?= ../Rack-SDK
 SOURCES += src/plugin.cpp
 SOURCES += src/UPolM.cpp
 SOURCES += src/UPolS.cpp
+SOURCES += src/UMult8.cpp
 SOURCES += src/shared/SubPorts.cpp
 
 DISTRIBUTABLES += res
