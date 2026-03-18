@@ -2,6 +2,9 @@
 
 Plugin di utility per VCV Rack, scritto con l'intento di abbinarsi stilisticamente a SubmarineFree.
 
+## Progetto
+Questo progetto è sviluppato con massiccio ausilio di IA. Il motivo principale è che mi servivano un paio di moduli split/merge con lo stile che volevo, poi è diventato qualcosa che mi ha incuriosito, ma allo stesso tempo non avevo voglia di approfondire cpp (bugia); alla fine sono finito in un vortice di vibe-coding mescolato a curiosità e studio leggero di questo linguaggio applicato a vcv-Rack2.
+
 
 ## Attribuzione componenti grafici
 
