@@ -33,7 +33,7 @@ struct BluePort : SilverPort {
 
 struct BlackPort : SilverPort {
 	BlackPort() {
-		col = nvgRGB(0x40, 0x40, 0x40);
+		col = nvgRGB(0x10, 0x10, 0x10);
 	}
 };
 
