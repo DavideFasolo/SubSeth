@@ -16,14 +16,7 @@
 
 namespace SubButton {
 
-enum class Accent {
-	Red,
-	Amber,
-	Green,
-	Blue,
-	Purple,
-	Pink
-};
+enum class Accent { Red, Amber, Green, Blue, Purple, Cyan, Pink };
 
 static inline float clampf(float x, float lo, float hi) {
 	return x < lo ? lo : (x > hi ? hi : x);
@@ -55,7 +48,7 @@ static inline NVGcolor accentColor(Accent accent) {
 		case Accent::Green:  return nvgRGB(0x00, 0xB5, 0x6E);
 		case Accent::Blue:   return nvgRGB(0x36, 0x95, 0xEF);
 		case Accent::Purple: return nvgRGB(0x8B, 0x4A, 0xDE);
-		case Accent::Pink:   return nvgRGB(0xFF, 0xAE, 0xC9);
+		case Accent::Cyan: return nvgRGB(0x00, 0xD8, 0xFF); case Accent::Pink:   return nvgRGB(0xFF, 0xAE, 0xC9);
 	}
 	return nvgRGB(0x8B, 0x4A, 0xDE);
 }
@@ -69,7 +62,7 @@ static inline NVGcolor labelColor(Accent accent) {
 		case Accent::Green:  return nvgRGB(0xFF, 0x99, 0x41);
 		case Accent::Blue:   return nvgRGB(0x80, 0x36, 0x10);
 		case Accent::Purple: return nvgRGB(0x42, 0xFF, 0x01);
-		case Accent::Pink:   return nvgRGB(0xFF, 0x37, 0x80);
+		case Accent::Cyan: return nvgRGB(0xFF, 0x7A, 0x00); case Accent::Pink:   return nvgRGB(0xFF, 0x37, 0x80);
 	}
 	return nvgRGB(0x42, 0xFF, 0x01);
 }
@@ -296,7 +289,7 @@ using AmberLight  = AccentModuleLight<Accent::Amber>;
 using GreenLight  = AccentModuleLight<Accent::Green>;
 using BlueLight   = AccentModuleLight<Accent::Blue>;
 using PurpleLight = AccentModuleLight<Accent::Purple>;
-using PinkLight   = AccentModuleLight<Accent::Pink>;
+using CyanLight = AccentModuleLight<Accent::Cyan>; using PinkLight   = AccentModuleLight<Accent::Pink>;
 
 template <typename TButton, typename TLight>
 static inline TButton* addLightedParamCentered(
@@ -321,7 +314,7 @@ using AmberLatch  = ThemedButton<Accent::Amber, false>;
 using GreenLatch  = ThemedButton<Accent::Green, false>;
 using BlueLatch   = ThemedButton<Accent::Blue, false>;
 using PurpleLatch = ThemedButton<Accent::Purple, false>;
-using PinkLatch   = ThemedButton<Accent::Pink, false>;
+using CyanLatch = ThemedButton<Accent::Cyan, false>; using PinkLatch   = ThemedButton<Accent::Pink, false>;
 
 // Momentary variants
 using RedMomentary    = ThemedButton<Accent::Red, true>;
@@ -329,6 +322,6 @@ using AmberMomentary  = ThemedButton<Accent::Amber, true>;
 using GreenMomentary  = ThemedButton<Accent::Green, true>;
 using BlueMomentary   = ThemedButton<Accent::Blue, true>;
 using PurpleMomentary = ThemedButton<Accent::Purple, true>;
-using PinkMomentary   = ThemedButton<Accent::Pink, true>;
+using CyanMomentary = ThemedButton<Accent::Cyan, true>; using PinkMomentary   = ThemedButton<Accent::Pink, true>;
 
 } // namespace SubButton

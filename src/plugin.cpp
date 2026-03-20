@@ -14,4 +14,6 @@ void init(Plugin* p) {
     p->addModel(modelUMult8L);
     p->addModel(modelUMult12);
     p->addModel(modelUMult14); p->addModel(modelUMat1604);
+	p->addModel(modelUMat1601);
+	p->addModel(modelUMat1601E);
 }

@@ -15,4 +15,6 @@ extern Model* modelUMult8;
 extern Model* modelUMult8L;
 extern Model* modelUMult12;
 extern Model* modelUMult14;
+extern Model* modelUMat1601;
+extern Model* modelUMat1601E;
 extern Model* modelUMat1604;
