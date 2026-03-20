@@ -16,6 +16,7 @@ SOURCES += src/UMat1604.cpp
 SOURCES += src/UMat1601E.cpp
 SOURCES += src/UMat1601.cpp
 
+SOURCES += src/UB20.cpp
 DISTRIBUTABLES += res
 
 include $(RACK_DIR)/plugin.mk
