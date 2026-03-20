@@ -1,7 +1,7 @@
 {
   "slug": "SubSeth",
   "name": "SubSeth",
-  "version": "2.4.2",
+  "version": "2.4.3",
   "license": "GPL-3.0-only",
   "brand": "SubSeth",
   "author": "Seth",
@@ -32,7 +32,7 @@
     },
     {
       "slug": "U-Mult-4",
-      "name": "U·Mult·4",
+      "name": "U\u00b7Mult\u00b74",
       "description": "4-channel universal mult",
       "tags": [
         "Polyphonic",
@@ -41,7 +41,7 @@
     },
     {
       "slug": "U-Mult-4L",
-      "name": "U·Mult·4L",
+      "name": "U\u00b7Mult\u00b74L",
       "description": "4-channel universal mult with editable labels",
       "tags": [
         "Polyphonic",
@@ -50,7 +50,7 @@
     },
     {
       "slug": "U-Mult-6",
-      "name": "U·Mult·6",
+      "name": "U\u00b7Mult\u00b76",
       "description": "6-channel universal mult",
       "tags": [
         "Polyphonic",
@@ -59,7 +59,7 @@
     },
     {
       "slug": "U-Mult-6L",
-      "name": "U·Mult·6L",
+      "name": "U\u00b7Mult\u00b76L",
       "description": "6-channel universal mult with editable labels",
       "tags": [
         "Polyphonic",
@@ -68,7 +68,7 @@
     },
     {
       "slug": "U-Mult-8",
-      "name": "U·Mult·8",
+      "name": "U\u00b7Mult\u00b78",
       "description": "8-channel universal mult",
       "tags": [
         "Polyphonic",
@@ -77,7 +77,7 @@
     },
     {
       "slug": "U-Mult-8L",
-      "name": "U·Mult·8L",
+      "name": "U\u00b7Mult\u00b78L",
       "description": "8-channel universal mult with editable labels",
       "tags": [
         "Polyphonic",
@@ -86,7 +86,7 @@
     },
     {
       "slug": "U-Mult-12",
-      "name": "U·Mult·12",
+      "name": "U\u00b7Mult\u00b712",
       "description": "12-channel universal mult",
       "tags": [
         "Polyphonic",
@@ -95,7 +95,7 @@
     },
     {
       "slug": "U-Mult-14",
-      "name": "U·Mult·14",
+      "name": "U\u00b7Mult\u00b714",
       "description": "14-channel universal mult",
       "tags": [
         "Polyphonic",
@@ -139,6 +139,15 @@
       "keywords": "blank blanking plate panel 20hp",
       "tags": [
         "Blank"
+      ]
+    },
+    {
+      "slug": "U-Knob-1",
+      "name": "U-Knob-1",
+      "description": "Minimal visual test module for the SubSeth knob component",
+      "tags": [
+        "Utility",
+        "Controller"
       ]
     }
   ]

@@ -12,11 +12,14 @@ SOURCES += src/UMult8L.cpp
 SOURCES += src/UMult12.cpp
 SOURCES += src/UMult14.cpp
 SOURCES += src/shared/SubPorts.cpp
+SOURCES += src/shared/SubKnob.cpp
 SOURCES += src/UMat1604.cpp
 SOURCES += src/UMat1601E.cpp
 SOURCES += src/UMat1601.cpp
 
+
 SOURCES += src/UB20.cpp
+SOURCES += src/UKnob1.cpp
 DISTRIBUTABLES += res
 
 include $(RACK_DIR)/plugin.mk

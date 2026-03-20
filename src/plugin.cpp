@@ -3,6 +3,7 @@
 Plugin* pluginInstance = nullptr;
 
 void init(Plugin* p) {
+  p->addModel(modelUKnob1);
     pluginInstance = p;
     p->addModel(modelUPolM);
     p->addModel(modelUPolS);
@@ -18,3 +19,4 @@ void init(Plugin* p) {
 	p->addModel(modelUMat1601E);
 	p->addModel(modelUB20);
 }
+
