@@ -48,3 +48,5 @@ struct PinkPort : SilverPort {
 		col = nvgRGB(0xe0, 0x80, 0xb0);
 	}
 };
+
+struct GreenPort : SilverPort { GreenPort() { col = nvgRGB(0x42, 0xFF, 0x01); } };

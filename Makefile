@@ -15,4 +15,5 @@ SOURCES += src/shared/SubPorts.cpp
 
 DISTRIBUTABLES += res
 
+SOURCES += src/UMat1604.cpp
 include $(RACK_DIR)/plugin.mk

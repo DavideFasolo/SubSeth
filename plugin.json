@@ -1,7 +1,7 @@
 {
   "slug": "SubSeth",
   "name": "SubSeth",
-  "version": "2.4.0",
+  "version": "2.4.1",
   "license": "GPL-3.0-only",
   "brand": "SubSeth",
   "author": "Seth",
@@ -16,61 +16,101 @@
       "slug": "U-Pol-M",
       "name": "U-Pol-M",
       "description": "16-to-1 polyphonic channel merger",
-      "tags": ["Polyphonic", "Utility"]
+      "tags": [
+        "Polyphonic",
+        "Utility"
+      ]
     },
     {
       "slug": "U-Pol-S",
       "name": "U-Pol-S",
       "description": "1-to-16 polyphonic channel splitter",
-      "tags": ["Polyphonic", "Utility"]
+      "tags": [
+        "Polyphonic",
+        "Utility"
+      ]
     },
     {
       "slug": "U-Mult-4",
       "name": "U·Mult·4",
       "description": "4-channel universal mult",
-      "tags": ["Polyphonic", "Utility"]
+      "tags": [
+        "Polyphonic",
+        "Utility"
+      ]
     },
     {
       "slug": "U-Mult-4L",
       "name": "U·Mult·4L",
       "description": "4-channel universal mult with editable labels",
-      "tags": ["Polyphonic", "Utility"]
+      "tags": [
+        "Polyphonic",
+        "Utility"
+      ]
     },
     {
       "slug": "U-Mult-6",
       "name": "U·Mult·6",
       "description": "6-channel universal mult",
-      "tags": ["Polyphonic", "Utility"]
+      "tags": [
+        "Polyphonic",
+        "Utility"
+      ]
     },
     {
       "slug": "U-Mult-6L",
       "name": "U·Mult·6L",
       "description": "6-channel universal mult with editable labels",
-      "tags": ["Polyphonic", "Utility"]
+      "tags": [
+        "Polyphonic",
+        "Utility"
+      ]
     },
     {
       "slug": "U-Mult-8",
       "name": "U·Mult·8",
       "description": "8-channel universal mult",
-      "tags": ["Polyphonic", "Utility"]
+      "tags": [
+        "Polyphonic",
+        "Utility"
+      ]
     },
     {
       "slug": "U-Mult-8L",
       "name": "U·Mult·8L",
       "description": "8-channel universal mult with editable labels",
-      "tags": ["Polyphonic", "Utility"]
+      "tags": [
+        "Polyphonic",
+        "Utility"
+      ]
     },
     {
       "slug": "U-Mult-12",
       "name": "U·Mult·12",
       "description": "12-channel universal mult",
-      "tags": ["Polyphonic", "Utility"]
+      "tags": [
+        "Polyphonic",
+        "Utility"
+      ]
     },
     {
       "slug": "U-Mult-14",
       "name": "U·Mult·14",
       "description": "14-channel universal mult",
-      "tags": ["Polyphonic", "Utility"]
+      "tags": [
+        "Polyphonic",
+        "Utility"
+      ]
+    },
+    {
+      "slug": "U-Mat-1604",
+      "name": "U-Mat-1604",
+      "description": "16x4 signal routing matrix",
+      "tags": [
+        "Utility",
+        "Mixer",
+        "Router"
+      ]
     }
   ]
 }
